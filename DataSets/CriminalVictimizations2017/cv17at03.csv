@@ -1,0 +1,29 @@
+Bureau of Justice Statistics,,,,,,,,,,
+Filename: cv17at03.csv,,,,,,,,,,
+"Appendix table 3. Standard errors for table 1: Violent victimization, by type of crime, 2015, 2016, and 2017",,,,,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files",,,,,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,,,,
+Date of version: 12/19/18,,,,,,,,,,
+,,,,,,,,,,
+"Appendix table 3. Standard errors for table 1: Violent victimization, by type of crime, 2015, 2016, and 2017",,,,,,,,,,
+,,,2015,,,2016,,,2017,
+Type of violent crime,,,Number,"Rate per 1,000",,Number,"Rate per 1,000",,Number,"Rate per 1,000"
+Violent crime,,,"312,236",1.16,,"259,442",0.95,,"279,729",1.03
+,Rape/sexual assault,,"64,514",0.24,,"41,819",0.15,,"53,259",0.2
+,Robbery,,"77,405",0.29,,"54,278",0.2,,"69,542",0.26
+,Assault,,"269,261",1,,"234,929",0.86,,"246,366",0.9
+,,Aggravated assault,"96,202",0.36,,"90,320",0.33,,"93,396",0.34
+,,Simple assault,"231,742",0.86,,"198,811",0.73,,"210,851",0.77
+,Domestic violence,,"134,994",0.5,,"108,702",0.4,,"119,259",0.44
+,,Intimate partner violence,"109,654",0.41,,"73,566",0.27,,"78,877",0.29
+,Stranger violence,,"191,191",0.71,,"171,101",0.63,,"166,738",0.61
+,Violent crime involving injury,,"152,053",0.56,,"118,979",0.44,,"119,939",0.44
+Serious violent crime,,,"161,399",0.6,,"127,938",0.47,,"144,783",0.53
+,Serious domestic violence,,"75,243",0.28,,"52,613",0.19,,"62,259",0.23
+,,Serious intimate partner violence,"60,700",0.23,,"43,185",0.16,,"44,122",0.16
+,Serious stranger violence,,"98,768",0.37,,"87,999",0.32,,"87,893",0.32
+,Serious violent crime involving a weapon,,"125,014",0.46,,"117,825",0.43,,"120,735",0.44
+,Serious violent crime involving injury,,"95,608",0.35,,"79,297",0.29,,"77,101",0.28
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files.",,,,,,,,,,

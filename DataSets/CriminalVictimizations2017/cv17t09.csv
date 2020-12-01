@@ -1,0 +1,42 @@
+Bureau of Justice Statistics,,,,,,,
+Filename: cv17t09.csv,,,,,,,
+"Table 9. Number and rate of violent victimizations, by victim’s veteran, citizenship, and disability status, 2017",,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File",,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,
+Date of version: 12/19/18,,,,,,,
+,,,,,,,
+"Table 9. Number and rate of violent victimizations, by victim’s veteran, citizenship, and disability status, 2017",,,,,,,
+,,,Violent victimization/a,,,,
+Victim demographic characteristic,,,Number,,"Rate per 1,000/b",,Population/c
+,Total,,"5,612,670",,20.6,,"272,468,480"
+Veteran status/d,,,,,,,
+,Veteran/e,,"348,520", †,19.4,,"18,006,440"
+,Non-veteran/*f,,"4,384,410", ,19.3,,"227,110,790"
+Citizenship status,,,,,,,
+,Born U.S. citizen/*g,,"5,106,650",,21.9,,"232,675,820"
+,Naturalized U.S. citizen,,"197,820", †,9.1, †,"21,840,640"
+,Non-U.S. citizen,,"260,320", †,16.2, †,"16,097,190"
+Disability status,,,,,,,
+,Persons with disabilities/h ,,"1,393,150", †,40.4, †,"34,480,740"
+,,Cognitive,"909,700", †,76, †,"11,967,780"
+,,Ambulatory,"560,060", †,28.9, †,"19,381,790"
+,,Vision,"208,940", †,43.5, †,"4,798,100"
+,,Hearing,"251,710", †,23.2, ,"10,831,970"
+,,Limited independent living/i,"394,420", †,31.8, †,"12,410,680"
+,,Limited self-care,"202,760", †,34.4, †,"5,901,130"
+,Persons without disabilities*,,"4,177,410",,17.7,,"235,898,220"
+Note: Details may not sum to totals due to rounding and missing data. See appendix table 11 for standard errors.,,,,,,,
+*Comparison group.,,,,,,,
+†Significant difference from comparison group at the 95% confidence level.,,,,,,,
+"a/Includes rape or sexual assault, robbery, aggravated assault, and simple assault. Includes threatened, attempted, and completed crimes. Excludes homicide because the National Crime Victimization Survey (NCVS) is based on interviews with victims and cannot measure murder.",,,,,,,
+"b/Rate is per 1,000 persons age 12 or older.",,,,,,,
+c/NCVS population includes persons age 12 or older living in non-institutionalized residential settings in the United States.,,,,,,,
+d/Includes persons age 18 or older.,,,,,,,
+"e/Veterans include persons currently or previously on active duty. Because the NCVS is a household-based survey and veterans are more likely to be out of the household at the time of data collection, most veterans in the sample are former active duty.",,,,,,,
+f/Non-veterans include persons who never served in the U.S. armed forces or who completed training in the Reserves or National Guard only.,,,,,,,
+"g/Includes persons born in the U.S., U.S. territory, or abroad to U.S. parents.",,,,,,,
+"h/Disabilities are classified according to six limitations: cognitive (serious difficulty in concentrating, remembering, or making decisions because of a physical, mental, or emotional condition), ambulatory (difficulty walking or climbing stairs), vision (blindness or serious difficulty seeing, even when wearing glasses), hearing (deafness or serious difficulty hearing), limited independent living (physical, mental, or emotional condition that impedes doing errands alone, such as visiting a doctor or shopping), and limited self-care (a condition that causes difficulty dressing or bathing).",,,,,,,
+i/Includes persons age 15 or older.,,,,,,,
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File.",,,,,,,

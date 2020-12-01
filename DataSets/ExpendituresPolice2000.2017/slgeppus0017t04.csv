@@ -1,0 +1,38 @@
+Bureau of Justice Statistics,,,,,,,
+Filename: slgeppus0017t04.csv,,,,,,,
+"Table 4. Nominal (not inflation-adjusted) local spending on police protection in the 25 most-populous U.S. cities, 2017",,,,,,,
+"Report title: State and Local Government Expenditures on Police Protection in the U.S., 2000-2017   NCJ 254856",,,,,,,
+"Data Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2017",,,,,,,
+"Authors: Emily Buehler, Ph.D., and Kevin Scott, Ph.D., BJS Statisticians",,,,,,,
+Refer questions to: askbjs@usdoj.gov 202-307-0765,,,,,,,
+Date of version: 7/13/2020,,,,,,,
+,,,,,,,
+"Table 4. Nominal (not inflation-adjusted) local spending on police protection in the 25 most-populous U.S. cities, 2017",,,,,,,
+City,Nominal police-protection expenditures (thousands of dollars),Nominal direct general expenditures (thousands of dollars),Population,Nominal police-protection expenditures per capita,Nominal direct general expenditures per capita,Police-protection expenditures as a percent of direct general expenditures ,
+"New York, NY","$5,685,111 ","$100,303,777 ","8,438,271",$673.73 ,"$11,886.77 ",5.67,%
+"Los Angeles, CA","$2,194,127 ","$9,618,230 ","3,982,002",$551.01 ,"$2,415.43 ",22.81,%
+"Chicago, IL","$1,456,302 ","$7,769,195 ","2,713,067",$536.77 ,"$2,863.62 ",18.74,%
+"Houston, TX","$728,467 ","$4,065,294 ","2,317,445",$314.34 ,"$1,754.21 ",17.92,%
+"Phoenix, AZ","$453,426 ","$2,422,265 ","1,634,984",$277.33 ,"$1,481.52 ",18.72,%
+"Philadelphia, PA","$673,356 ","$6,781,475 ","1,580,221",$426.12 ,"$4,291.47 ",9.93,%
+"San Antonio, TX","$389,142 ","$2,273,708 ","1,511,409",$257.47 ,"$1,504.36 ",17.11,%
+"San Diego, CA","$318,625 ","$2,548,601 ","1,414,427",$225.27 ,"$1,801.86 ",12.5,%
+"Dallas, TX","$410,867 ","$3,235,586 ","1,343,087",$305.91 ,"$2,409.07 ",12.7,%
+"San Jose, CA","$244,718 ","$1,544,222 ","1,032,136",$237.10 ,"$1,496.14 ",15.85,%
+"Honolulu, HI","$287,476 ","$1,934,111 ","986,429",$291.43 ,"$1,960.72 ",14.86,%
+"Austin, TX","$347,610 ","$2,010,385 ","951,750",$365.23 ,"$2,112.30 ",17.29,%
+"Jacksonville, FL","$352,863 ","$1,680,409 ","891,736",$395.70 ,"$1,884.42 ",21,%
+"Columbus, OH","$311,285 ","$1,749,477 ","881,763",$353.03 ,"$1,984.07 ",0.18,%
+"San Francisco, CA","$524,927 ","$10,262,871 ","879,166",$597.07 ,"$11,673.42 ",5.11,%
+"Fort Worth, TX","$284,917 ","$1,299,586 ","875,456",$325.45 ,"$1,484.47 ",21.92,%
+"Indianapolis, IN","$220,425 ","$2,462,058 ","871,572",$252.91 ,"$2,824.85 ",8.95,%
+"Charlotte, NC","$269,884 ","$1,535,364 ","859,347",$314.06 ,"$1,786.66 ",17.58,%
+"Seattle, WA","$214,965 ","$2,586,164 ","729,601",$294.63 ,"$3,544.63 ",8.31,%
+"Denver, CO","$236,678 ","$3,002,785 ","705,439",$335.50 ,"$4,256.62 ",7.88,%
+"Washington, DC","$633,302 ","$13,255,086 ","695,691",$910.32 ,"$19,053.12 ",4.78,%
+"Nashville, TN","$213,301 ","$2,860,520 ","689,006",$309.58 ,"$4,151.66 ",7.46,%
+"Boston, MA","$375,505 ","$3,563,534 ","688,276",$545.57 ,"$5,177.48 ",10.54,%
+"El Paso, TX","$119,609 ","$744,645 ","682,938",$175.14 ,"$1,090.36 ",16.06,%
+"Detroit, MI","$271,710 ","$2,108,499 ","674,188",$403.02 ,"$3,127.46 ",12.89,%
+"Note: City list and order are based on 2017 population, excluding Louisville, KY. (See table 2). Comparisons across cities should be made with caution as different local government arrangements affect cities’ responsibilities for police protection and other government functions. Police-protection expenditures are funds spent on regular police services, police patrols and communications, crime-prevention activities, temporary lockups and holding tanks, traffic safety and engineering (but not highway planning and engineering), vehicular inspection and licensing, buildings used exclusively for police purposes, maintenance of buildings used for police purposes, medical examiners and coroners, law enforcement activities of sheriffs’ offices, and, if employed by a police agency, unsworn school-crossing guards, parking meter-readers, and animal wardens.",,,,,,,
+"Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2017.",,,,,,,

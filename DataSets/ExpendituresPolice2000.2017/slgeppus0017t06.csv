@@ -1,0 +1,43 @@
+Bureau of Justice Statistics,,,,,,,,,
+Filename: slgeppus0017t06.csv,,,,,,,,,
+"Table 6. Nominal expenditures on police protection as a percent of U.S. Gross Domestic Product in the 25 most-populous U.S. cities, 2000-2017",,,,,,,,,
+"Report title: State and Local Government Expenditures on Police Protection in the U.S., 2000-2017   NCJ 254856",,,,,,,,,
+"Data Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2000-2017",,,,,,,,,
+"Authors: Emily Buehler, Ph.D., and Kevin Scott, Ph.D., BJS Statisticians",,,,,,,,,
+Refer questions to: askbjs@usdoj.gov 202-307-0765,,,,,,,,,
+Date of version: 7/13/2020,,,,,,,,,
+,,,,,,,,,
+"Table 6. Nominal expenditures on police protection as a percent of U.S. Gross Domestic Product in the 25 most-populous U.S. cities, 2000-2017",,,,,,,,,
+,Nominal police-protection expenditures (thousands of dollars),,, Nominal police-protection expenditures as a percent of U.S. GDP,,,,,
+City/a,2000,2017,,2000/b,,2017/c,,"Percent change, 2000-2017/d",
+"New York, NY","$3,224,846 ","$5,685,111 ",,0.031,%,0.029,%,-7.41,%
+"Los Angeles, CA","$993,294 ","$2,194,127 ",,0.01,%,0.011,%,16.02,%
+"Chicago, IL","$1,104,781 ","$1,456,302 ",,0.011,%,0.007,%,-30.76,%
+"Houston, TX","$403,466 ","$728,467 ",,0.004,%,0.004,%,-5.17,%
+"Phoenix, AZ","$264,614 ","$453,426 ",,0.003,%,0.002,%,-10,%
+"Philadelphia, PA","$459,557 ","$673,356 ",,0.004,%,0.003,%,-23.04,%
+"San Antonio, TX","$173,830 ","$389,142 ",,0.002,%,0.002,%,17.58,%
+"San Diego, CA","$272,491 ","$318,625 ",,0.003,%,0.002,%,-0.39,%
+"Dallas, TX","$208,493 ","$410,867 ",,0.002,%,0.002,%,3.51,%
+"San Jose, CA","$163,237 ","$244,718 ",,0.002,%,0.001,%,-21.26,%
+"Honolulu, HI","$152,540 ","$287,476 ",,0.001,%,0.001,%,-1.01,%
+"Austin, TX","$98,167 ","$347,610 ",,0.001,%,0.002,%,85.99,%
+"Jacksonville, FL","$131,145 ","$352,863 ",,0.001,%,0.002,%,41.32,%
+"Columbus, OH","$179,617 ","$311,285 ",,0.002,%,0.002,%,-8.97,%
+"San Francisco, CA","$327,260 ","$524,927 ",,0.003,%,0.003,%,-15.75,%
+"Fort Worth, TX","$104,780 ","$284,917 ",,0.001,%,0.001,%,42.82,%
+"Indianapolis, IN","$131,014 ","$220,425 ",,0.001,%,0.001,%,-11.63,%
+"Charlotte, NC","$118,261 ","$269,884 ",,0.001,%,0.001,%,19.86,%
+"Seattle, WA","$158,097 ","$214,965 ",,0.002,%,0.001,%,-28.58,%
+"Denver, CO","$138,072 ","$236,678 ",,0.001,%,0.001,%,-9.97,%
+"Washington, DC","$329,503 ","$633,302 ",,0.003,%,0.003,%,0.95,%
+"Nashville, TN","$102,675 ","$213,301 ",,0.001,%,0.001,%,9.12,%
+"Boston, MA","$234,340 ","$375,505 ",,0.002,%,0.002,%,-15.84,%
+"El Paso, TX","$72,874 ","$119,609 ",,0.001,%,0.001,%,-13.79,%
+"Detroit, MI","$306,638 ","$271,710 ",,0.003,%,0.001,%,-53.46,%
+"Note: Police-protection expenditures are funds spent on regular police services, police patrols and communications, crime-prevention activities, temporary lockups and holding tanks, traffic safety and engineering (but not highway planning and engineering), vehicular inspection and licensing, buildings used exclusively for police purposes, maintenance of buildings used for police purposes, medical examiners and coroners, law enforcement activities of sheriffs’ offices, and, if employed by a police agency, unsworn school-crossing guards, parking meter-readers, and animal wardens.",,,,,,,,,
+"a/City list and order are based on 2017 population. Louisville, KY (770,377 population in 2017) consolidated with its county government in 2003, making a comparison of 2000 to 2017 inappropriate. Comparisons across cities should be made with caution as different local government arrangements affect cities’ responsibilities for police protection and other government functions.",,,,,,,,,
+b/U.S. nominal Gross Domestic Product in 2000 was $10.252 trillion. See table 5 for full value.,,,,,,,,,
+c/U.S. nominal Gross Domestic Product in 2017 was $19.519 trillion. See table 5 for full value.,,,,,,,,,
+d/Percentages were calculated using un-rounded numbers and cannot be reproduced exactly using the rounded statistics in the table.,,,,,,,,,
+"Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2000-2017.",,,,,,,,,

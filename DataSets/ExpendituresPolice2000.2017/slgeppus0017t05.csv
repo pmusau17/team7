@@ -1,0 +1,31 @@
+Bureau of Justice Statistics,,,,,,,,,
+Filename: slgeppus0017t05.csv,,,,,,,,,
+"Table 5. State and local government police-protection and direct general expenditures as a percent of U.S. Gross Domestic Product, 2000-2017",,,,,,,,,
+"Report title: State and Local Government Expenditures on Police Protection in the U.S., 2000-2017   NCJ 254856",,,,,,,,,
+"Data Source: BJS analysis of Annual Survey of State and Local Government Finances, U.S. Census Bureau, 2000-2017",,,,,,,,,
+"Authors: Emily Buehler, Ph.D., and Kevin Scott, Ph.D., BJS Statisticians",,,,,,,,,
+Refer questions to: askbjs@usdoj.gov 202-307-0765,,,,,,,,,
+Date of version: 7/13/2020,,,,,,,,,
+,,,,,,,,,
+"Table 5. State and local government police-protection and direct general expenditures as a percent of U.S. Gross Domestic Product, 2000-2017",,,,,,,,,
+Year,Nominal police-protection expenditures (thousands of dollars),Nominal direct general expenditures (thousands of dollars),Nominal U.S. GDP (millions of dollars),Police-protection expenditures as a percent of U.S. GDP,,Direct general expenditures as a percent of U.S. GDP,,Police-protection expenditures as a percent of direct general expenditures,
+2000,"$56,798,071 ","$1,502,767,621 ","10,252,347",0.554,%,14.658,%,3.78,%
+2001,"$59,584,216 ","$1,621,757,357 ","10,581,822",0.563,%,15.326,%,3.67,%
+2002,"$64,458,395 ","$1,732,478,495 ","10,936,418",0.589,%,15.841,%,3.72,%
+2003,"$67,361,388 ","$1,817,512,846 ","11,458,246",0.588,%,15.862,%,3.71,%
+2004,"$70,088,308 ","$1,903,915,350 ","12,213,730",0.574,%,15.588,%,3.68,%
+2005,"$74,131,066 ","$2,007,490,261 ","13,036,637",0.569,%,15.399,%,3.69,%
+2006,"$78,471,954 ","$2,117,161,432 ","13,814,609",0.568,%,15.326,%,3.71,%
+2007,"$84,002,152 ","$2,259,364,055 ","14,451,860",0.581,%,15.634,%,3.72,%
+2008,"$89,463,025 ","$2,401,417,374 ","14,712,845",0.608,%,16.322,%,3.73,%
+2009,"$95,017,084 ","$2,495,901,060 ","14,448,932",0.658,%,17.274,%,3.81,%
+2010,"$95,771,705 ","$2,537,891,917 ","14,992,052",0.639,%,16.928,%,3.77,%
+2011,"$96,766,175 ","$2,579,508,975 ","15,542,582",0.623,%,16.596,%,3.75,%
+2012,"$96,879,449 ","$2,588,307,963 ","16,197,007",0.598,%,15.98,%,3.74,%
+2013,"$98,866,963 ","$2,623,304,879 ","16,784,851",0.589,%,15.629,%,3.77,%
+2014,"$101,751,011 ","$2,710,967,361 ","17,527,258",0.581,%,15.467,%,3.75,%
+2015,"$105,164,305 ","$2,839,458,295 ","18,224,780",0.577,%,15.58,%,3.7,%
+2016,"$109,210,078 ","$2,944,651,388 ","18,715,040",0.584,%,15.734,%,3.71,%
+2017,"$114,503,466 ","$3,071,187,371 ","19,519,424",0.587,%,15.734,%,3.73,%
+"Note: Police-protection expenditures are funds spent on regular police services, police patrols and communications, crime-prevention activities, temporary lockups and holding tanks, traffic safety and engineering (but not highway planning and engineering), vehicular inspection and licensing, buildings used exclusively for police purposes, maintenance of buildings used for police purposes, medical examiners and coroners, law enforcement activities of sheriffs’ offices, and, if employed by a police agency, unsworn school-crossing guards, parking meter-readers, and animal wardens. ",,,,,,,,,
+"Source: BJS analysis of Annual Survey of State and Local Government Finances, U.S. Census Bureau, 2000-2017.",,,,,,,,,

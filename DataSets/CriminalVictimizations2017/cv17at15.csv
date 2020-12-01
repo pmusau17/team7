@@ -1,0 +1,23 @@
+Bureau of Justice Statistics,,,,,,,,,,,,
+Filename: cv17at15.csv,,,,,,,,,,,,
+"Appendix table 15. Standard errors for table 13: Prevalence of violent crime, burglary, or motor vehicle theft, 2015, 2016, and 2017",,,,,,,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files",,,,,,,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,,,,,,
+Date of version: 12/19/18,,,,,,,,,,,,
+,,,,,,,,,,,,
+"Appendix table 15. Standard errors for table 13: Prevalence of violent crime, burglary, or motor vehicle theft, 2015, 2016, and 2017",,,,,,,,,,,,
+,,,Number of persons victimized,,,,Prevalence rate,,,,,
+Type of crime,,,2015,2016,2017,,2015,,2016,,2017,
+,Total,,"264,222","234,648","232,328",,0.091,%,0.036,%,0.082,%
+Violent crime,,,,,,,,,,,,
+,Rape/sexual assault,,"27,828","22,990","18,642",,0.01,%,0.008,%,0.007,%
+,Robbery,,"36,761","28,206","34,671",,0.014,,0.01,,0.013,
+,Assault,,"103,323","92,481","97,147",,0.037,,0.034,,0.035,
+,,Aggravated assault,"42,526","50,020","43,542",,0.016,,0.018,,0.016,
+,,Simple assault,"88,692","78,887","83,931",,0.032,,0.029,,0.031,
+Property crime,,,,,,,,,,,,
+,Household burglary,,"213,825","168,672","171,766",,0.076,%,0.062,%,0.062,%
+,Motor vehicle theft,,"100,563","103,564","89,808",,0.037,,0.038,,0.033,
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files.",,,,,,,,,,,,

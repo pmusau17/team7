@@ -1,0 +1,30 @@
+Bureau of Justice Statistics,,,,
+Filename: cv17at11.csv,,,,
+"Appendix table 11. Standard errors for table 9: Number and rate of violent victimizations, by victim’s veteran, citizenship, and disability status, 2017",,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File",,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,
+Date of version: 12/19/18,,,,
+,,,,
+"Appendix table 11. Standard errors for table 9: Number and rate of violent victimizations, by victim’s veteran, citizenship, and disability status, 2017",,,,
+,,,Violent victimization,
+Victim demographic characteristic,,,Number,"Rate per 1,000"
+,Total,,"279,729",1.03
+Veteran status,,,,
+,Veteran,,"51,591",2.76
+,Non-veteran,,"280,714",1.23
+Citizenship status,,,,
+,Born U.S. citizen,,"311,260",1.33
+,Naturalized U.S. citizen,,"35,897",1.61
+,Non-U.S. citizen,,"42,752",2.57
+Disability status,,,,
+,Persons with disabilities ,,"129,123",3.52
+,,Cognitive,"97,018",7.31
+,,Ambulatory,"70,330",3.45
+,,Vision,"37,162",7.26
+,,Hearing,"41,842",3.7
+,,Limited independent living,"55,905",4.27
+,,Limited self-care,"36,461",5.85
+,Persons without disabilities,,"271,659",1.15
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File.",,,,

@@ -1,0 +1,33 @@
+Bureau of Justice Statistics,,,,,,,,,
+Filename: cv17at08.csv,,,,,,,,,
+"Appendix table 8. Standard errors for table 6: Percent and rate of victimizations reported to police, by type of crime, 2016 and 2017",,,,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2016 and 2017 Public-Use Files",,,,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,,,
+Date of version: 12/19/18,,,,,,,,,
+,,,,,,,,,
+"Appendix table 8. Standard errors for table 6: Percent and rate of victimizations reported to police, by type of crime, 2016 and 2017",,,,,,,,,
+,,,Percent reported,,,,,"Victimization rate reported per 1,000",
+Type of crime,,,2016,,2017,,,2016,2017
+Violent crime,,,2.22,%,2.18,%,,0.68,0.71
+,Rape/sexual assault,,5.03,,5.5,,,0.07,0.11
+,Robbery,,5.28,,4.78,,,0.16,0.17
+,Assault,,2.32,,2.32,,,0.62,0.62
+,,Aggravated assault,3.89,,4,,,0.28,0.26
+,,Simple assault,2.45,,2.47,,,0.48,0.5
+,Domestic violence,,3.88,,3.67,,,0.26,0.27
+,,Intimate partner violence,4.78,,4.62,,,0.17,0.18
+,Stranger violence,,3.01,,3.08,,,0.36,0.37
+,Violent crime involving injury,,3.68,,3.69,,,0.27,0.29
+Serious violent crime,,,3.24,%,3.12,%,,0.37,0.39
+,Serious domestic violence,,5.82,,5.31,,,0.13,0.14
+,,Serious intimate partner violence,6.51,,6.59,,,0.1,0.11
+,Serious stranger violence,,4.34,,4.34,,,0.22,0.23
+,Serious violent crime involving a weapon,,3.69,,3.68,,,0.31,0.29
+,Serious violent crime involving injury,,4.6,,4.71,,,0.19,0.19
+Property crime,,,0.96,%,0.8,%,,1.43,1.11
+,Household burglary,,1.99,,1.8,,,0.7,0.54
+,Motor vehicle theft,,3.7,,3.15,,,0.35,0.3
+,Other theft,,1.02,,0.86,,,1.14,0.88
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2016 and 2017 Public-Use Files.",,,,,,,,,

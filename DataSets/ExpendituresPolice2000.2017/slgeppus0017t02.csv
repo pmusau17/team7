@@ -1,0 +1,41 @@
+Bureau of Justice Statistics,,,,,,,,,,,,,
+Filename: slgeppus0017t02.csv,,,,,,,,,,,,,
+"Table 2. Real (inflation-adjusted) local government spending on police protection in the 25 most-populous U.S. cities, 2000-2017",,,,,,,,,,,,,
+"Report title: State and Local Government Expenditures on Police Protection in the U.S., 2000-2017   NCJ 254856",,,,,,,,,,,,,
+"Data Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2000-2017",,,,,,,,,,,,,
+"Authors: Emily Buehler, Ph.D., and Kevin Scott, Ph.D., BJS Statisticians",,,,,,,,,,,,,
+Refer questions to: askbjs@usdoj.gov 202-307-0765,,,,,,,,,,,,,
+Date of version: 7/13/2020,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+"Table 2. Real (inflation-adjusted) local government spending on police protection in the 25 most-populous U.S. cities, 2000-2017",,,,,,,,,,,,,
+,,,Per capita direct expenditures on police protection (2012 dollars; GDP price deflator),,,,,Percent of direct general expenditures spent on police protection,,,,,
+City/a,2000 population,2017 population,2000,2017,"Percent change, 2000-2017/b",,,2000,,2017,,"Percent change, 2000-2017/b",
+"New York, NY","8,008,278","8,438,271",$515.75 ,$625.02 ,21.19,%,,7.35,%,5.67,%,-22.88,%
+"Los Angeles, CA","3,694,820","3,982,002",$344.31 ,$511.17 ,48.46,%,,19.09,%,22.81,%,19.47,%
+"Chicago, IL","2,896,016","2,713,067",$488.59 ,$497.96 ,1.92,%,,22.99,%,18.74,%,-18.48,%
+"Houston, TX","1,953,631","2,317,445",$264.51 ,$291.61 ,10.25,%,,19.35,%,17.92,%,-7.4,%
+"Phoenix, AZ","1,321,045","1,634,984",$256.55 ,$257.28 ,0.28,%,,15.02,%,18.72,%,24.61,%
+"Philadelphia, PA","1,517,550","1,580,221",$387.85 ,$395.31 ,1.92,%,,10.97,%,9.93,%,-9.47,%
+"San Antonio, TX","1,144,646","1,511,409",$194.50 ,$238.85 ,22.8,%,,16.25,%,17.11,%,5.29,%
+"San Diego, CA","1,223,400","1,414,427",$285.27 ,$208.98 ,-26.74,%,,15.56,%,12.5,%,-19.65,%
+"Dallas, TX","1,188,580","1,343,087",$224.66 ,$283.79 ,26.32,%,,13.45,%,12.7,%,-5.61,%
+"San Jose, CA","894,943","1,032,136",$233.61 ,$219.96 ,-5.85,%,,14.34,%,15.85,%,10.52,%
+"Honolulu, HI","876,156","986,429",$222.98 ,$270.36 ,21.25,%,,14.88,%,14.86,%,-0.14,%
+"Austin, TX","656,562","951,750",$191.50 ,$338.82 ,76.93,%,,11.17,%,17.29,%,54.85,%
+"Jacksonville, FL","735,617","891,736",$228.33 ,$367.09 ,60.77,%,,11.52,%,21,%,82.21,%
+"Columbus, OH","711,470","881,763",$323.34 ,$327.50 ,1.29,%,,18.3,%,17.79,%,-2.78,%
+"San Francisco, CA","776,733","879,166",$539.63 ,$553.90 ,2.65,%,,7.38,%,5.11,%,-30.71,%
+"Fort Worth, TX","534,694","875,456",$250.98 ,$301.92 ,20.29,%,,20.6,%,21.92,%,6.42,%
+"Indianapolis, IN","791,926","871,572",$211.89 ,$234.62 ,10.73,%,,8.06,%,8.95,%,11.14,%
+"Charlotte, NC","540,828","859,347",$280.06 ,$291.35 ,4.03,%,,18.1,%,17.58,%,-2.89,%
+"Seattle, WA","563,374","729,601",$359.42 ,$273.33 ,-23.95,%,,14.47,%,8.31,%,-42.56,%
+"Denver, CO","554,636","705,439",$318.84 ,$311.25 ,-2.38,%,,9.76,%,7.88,%,-19.28,%
+"Washington, DC","572,059","695,691",$737.72 ,$844.50 ,14.47,%,,6.4,%,4.78,%,-25.3,%
+"Nashville, TN","569,891","689,006",$230.75 ,$287.19 ,24.46,%,,6.87,%,7.46,%,8.51,%
+"Boston, MA","589,141","688,276",$509.45 ,$506.13 ,-0.65,%,,11.16,%,10.54,%,-5.61,%
+"El Paso, TX","563,662","682,938",$165.59 ,$162.48 ,-1.88,%,,19.85,%,16.06,%,-19.08,%
+"Detroit, MI","951,270","674,188",$412.85 ,$373.88 ,-9.44,%,,8.21,%,12.89,%,56.99,%
+"Note: Police-protection expenditures are funds spent on regular police services, police patrols and communications, crime-prevention activities, temporary lockups and holding tanks, traffic safety and engineering (but not highway planning and engineering), vehicular inspection and licensing, buildings used exclusively for police purposes, maintenance of buildings used for police purposes, medical examiners and coroners, law enforcement activities of sheriffs’ offices, and, if employed by a police agency, unsworn school-crossing guards, parking meter-readers, and animal wardens.",,,,,,,,,,,,,
+"a/City list and order are based on 2017 population. Louisville, KY (770,377 population in 2017) consolidated with its county government in 2003, making a comparison of 2000 to 2017 inappropriate. Comparisons across cities should be made with caution as different local government arrangements affect cities’ responsibilities for police protection and other government functions.",,,,,,,,,,,,,
+b/Percentages were calculated using un-rounded numbers and cannot be reproduced exactly using the rounded statistics in the table.,,,,,,,,,,,,,
+"Source: BJS analysis of Justice Employment and Expenditure Extracts, based on Annual Survey of State and Local Government Finances conducted by U.S. Census Bureau, 2000-2017.",,,,,,,,,,,,,

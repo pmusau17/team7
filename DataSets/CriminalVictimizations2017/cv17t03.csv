@@ -1,0 +1,22 @@
+Bureau of Justice Statistics,,,,,,,,,,,,,
+Filename: cv17t03.csv,,,,,,,,,,,,,
+"Table 3. Property victimization, by type of crime, 2015, 2016, and 2017",,,,,,,,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files",,,,,,,,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,,,,,,,
+Date of version: 12/19/18,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+"Table 3. Property victimization, by type of crime, 2015, 2016, and 2017",,,,,,,,,,,,,
+,,2015*,,,2017,,,2016*,,,2017,,
+Type of property crime,,Number,"Rate per 1,000/a",,Number,"Rate per 1,000/a",,Number,"Rate per 1,000/a",,Number,"Rate per 1,000/a",
+,Total,"14,611,040",110.7,,"13,340,220",108.4,,"15,815,310",118.6,,"13,340,220",108.4, †
+Household burglary,,"2,904,570",22,,"2,538,170",20.6,,"3,160,450",23.7,,"2,538,170",20.6, †
+Motor vehicle theft,,"564,160",4.3,,"516,810",4.2,,"618,330",4.6,,"516,810",4.2,
+Other theft/b,,"11,142,310",84.4,,"10,285,240",83.6,,"12,036,530",90.3,,"10,285,240",83.6, †
+"Note: Details may not sum to totals due to rounding. Classifications include threatened, attempted, and completed crimes. Total number of households was 131,962,260 in 2015, 133,365,270 in 2016, and 123,085,790 in 2017. The NCVS household weighting adjustment was updated for 2017, which decreased the estimated number of households, and the number of households experiencing property crime, by about 8%. As a result, readers should not compare the number of property crimes between 2016 and 2017. Property crime rates are unaffected by this change. See appendix table 5 for standard errors. See Methodology for details on the change in the household weighting adjustment in the NCVS.",,,,,,,,,,,,,
+*Comparison year.,,,,,,,,,,,,,
+†Significant difference from comparison year at the 95% confidence level.,,,,,,,,,,,,,
+"a/Rate is per 1,000 households.",,,,,,,,,,,,,
+b/Involves other unlawful taking or attempted unlawful taking of property or cash without personal contact with the victim.,,,,,,,,,,,,,
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2015, 2016, and 2017 Public-Use Files.",,,,,,,,,,,,,

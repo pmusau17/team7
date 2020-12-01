@@ -1,0 +1,41 @@
+Bureau of Justice Statistics,,,,,,,,,,,,
+Filename: cv17t10.csv,,,,,,,,,,,,
+"Table 10. Nonfatal violent incidents, by total population, victim, and offender demographic characteristics, 2017",,,,,,,,,,,,
+"Report title: Criminal Victimization, 2017   NCJ 252472",,,,,,,,,,,,
+"Data source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File",,,,,,,,,,,,
+"Authors: Rachel E. Morgan, Ph.D., and Jennifer L. Truman, Ph.D., BJS Statisticians",,,,,,,,,,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765 ,,,,,,,,,,,,
+Date of version: 12/19/18,,,,,,,,,,,,
+,,,,,,,,,,,,
+"Table 10. Nonfatal violent incidents, by total population, victim, and offender demographic characteristics, 2017",,,,,,,,,,,,
+,,Population/a,,,Victim,,,,Offender/b,,,
+Demographic characteristic,,Number of incidents,Percent,,Number of incidents,,Percent,,Number of incidents,,Percent,
+,Total,"272,468,480",100,%,"5,179,800",,100,%,"5,179,800",,100,%
+Sex,,,,,,,,,,,,
+,Male*,"132,432,710",48.6,%,"2,534,130",,48.9,%,"3,602,740",,75.8,%
+,Female,"140,035,770",51.4,,"2,645,670",,51.1,,"959,200", †,20.2, †
+,Both male and female offenders,~,~,,~,,~,,"188,770", †,4, †
+Race/Hispanic origin/c,,,,,,,,,,,,
+,White*,"171,454,370",62.9,%,"3,247,940", ,62.7,%,"2,230,910", ,49.2,%
+,Black,"32,699,520",12,,"697,590", †,13.5, †,"1,112,610", †,24.5, †
+,Hispanic,"45,481,910",16.7,,"853,730", †,16.5, †,"647,970", †,14.3, †
+,Asian,"16,582,080",6.1,,"113,850", †,2.2, †,"44,090", †,1, †
+,Other/d,"6,250,600",2.3,,"266,690", †,5.1, †,"425,050", †,9.4, †
+,Multiple offenders of various races/e,~,~,,~,,~,,"74,450", †,1.6, †
+Age,,,,,,,,,,,,
+,12 or younger,~,~,,~,,~,,"109,280", †,2.5,% †
+,12–17,"24,911,170",9.1,%,"785,080", †,15.2,% †,"667,620", †,15.3, †
+,18–20*,"12,599,000",4.6,,"443,910",,8.6,,"327,490",,7.5,
+,21–29,"40,111,370",14.7,,"1,064,630", †,20.6, †,"900,360", †,20.6, †
+,30 or older,"194,846,940",71.5,,"2,886,190", †,55.7, †,"2,170,420", †,49.6, †
+,Multiple offenders of various ages,~,~,,~,,~,,"200,270", †,4.6, †
+Note: Based on persons age 12 or older. Details may not sum to totals due to rounding and missing data for offender characteristics. An incident is a specific criminal act involving one or more victims or victimizations. Offender characteristics are based on the victims' perceptions of the offenders. See appendix table 12 for standard errors.,,,,,,,,,,,,
+*Comparison group.,,,,,,,,,,,,
+†Significant difference from comparison group at the 95% confidence level.,,,,,,,,,,,,
+~Not applicable.,,,,,,,,,,,,
+a/NCVS population includes persons age 12 or older living in non-institutionalized residential settings in the United States.,,,,,,,,,,,,
+"b/Includes incidents in which the perceived offender characteristics were reported. The sex of the offender was unknown in 8% of incidents, the race/Hispanic origin of offender was unknown in 12% of incidents, and the age of offender was unknown in 16% of incidents.",,,,,,,,,,,,
+"c/Excludes persons of Hispanic/Latino origin, unless specified.",,,,,,,,,,,,
+d/Includes American Indians and Alaska Natives; Native Hawaiians and Other Pacific Islanders; and persons of two or more races.,,,,,,,,,,,,
+e/Victims perceived multiple offenders of various races or Hispanic origin.,,,,,,,,,,,,
+"Source: Bureau of Justice Statistics, National Crime Victimization Survey, 2017 Public-Use File.",,,,,,,,,,,,
