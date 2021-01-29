@@ -1,19 +1,20 @@
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
-
 import dash
+from dash.dependencies import Input, Output, State, ClientsideFunction
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+import dash_bootstrap_components as dbc
+import plotly.graph_objects as go
 import plotly.express as px
-import pandas as pd
-import geopandas as gpd
+
+
+from datetime import datetime as dt
 import json
-
-external_stylesheets = ['https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css']
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+import numpy as np
+import pandas as pd
+import os
+import geopandas as gpd
+# Recall app
+from app import app
 
 # Load the data
 df = pd.read_csv('../CleanData/CompleteMerged.csv')
@@ -49,13 +50,8 @@ fig3.update_layout(
         title = 'Metropolitan Areas by Cluster Label'
 )
 
-
-app.layout = html.Div(children=[
-    
-
-    html.Div([
-        html.H1(children='On Defunding Police'),
-        
+stats = html.Div(
+    [        
         html.P('2020 was a pivotal year around the world within the context of the conversation around racial equity, justice, and equality. Specifically, in the United States, thousands of protestors and activists have taken to the streets to call for police reform and support for policies that effectively address the underlying factors that contribute to crime, poverty, and homelessness. One of the most poignant demands of these individuals has been a call for a complete reimagining of law enforcement in the United States. This project centers on one facet of this demand which is the reallocation of police budgets or more broadly “defunding the police.” What does this call entail and is there merit to considering its implementation?'),
         
         dcc.Graph(
@@ -83,22 +79,7 @@ app.layout = html.Div(children=[
         dcc.Graph(
         id='scatter',
         figure=fig2
-        ),
-
-        ]),
-
-])
-
-@app.callback(
-    Output('scatter', 'figure'),
-    Input('demo-dropdown', 'value'))
-def update_scatter(input_value):
-    fig= px.scatter(df, x="police", y=input_value,color='Group',hover_data=['city_merge_name','violent_crime','police','population'])
-
-    fig.update_layout(transition_duration=500)
-
-    return fig
-
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
+        )
+    ],
+    className="ds4a-body",
+)
