@@ -14,5 +14,5 @@ from app import app
 
 
 title = html.Div(
-    className="ds4a-title", children=[html.H1("US Sales Dashboard")], id="title"
+    className="ds4a-title", children=[html.H1("On Defunding Police")], id="title"
 )
