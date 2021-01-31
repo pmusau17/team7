@@ -26,10 +26,10 @@ import json
 from app_handle import app
 
 # LOAD THE DIFFERENT FILES
-from lib import sidebar, stats
+from lib import sidebar, stats, title
 
 app.layout = html.Div(
-    [stats.stats, sidebar.sidebar,],
+    [title.title,stats.stats, sidebar.sidebar,],
     className="ds4a-app",  # You can also add your own css files by locating them into the assets folder
 )
 
