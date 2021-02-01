@@ -17,35 +17,38 @@ import geopandas as gpd
 from app import app
 
 # Load the data
-df = pd.read_csv('../CleanData/CompleteMerged.csv')
-# Load the GeoJson Data
-relevant_areas = gpd.read_file('../CleanData/relevant_areas.json')
-# create options for drop down
+df = pd.read_csv('data/CleanDataScatter.csv')
+
+# Create Options For Drop Down Menu
 labels = []
 for i in list(df.columns):
     item = {'label': '{}'.format(i), 'value': '{}'.format(i)}
     labels.append(item)
 
 
-average_crime_per_year = df.groupby('year').mean().reset_index()
+average_crime_per_year = df.groupby('Year').mean().reset_index()
 
 # create the df for visualizing violent crime per group
-by_group = df.groupby(['year','Group']).mean().reset_index()
+by_group = df.groupby(['Year','Group']).mean().reset_index()
 by_group['Group'] = by_group['Group'].astype(str) 
-by_group['violent_crime'] = by_group['violent_crime'] * 10**5
-fig = px.bar(by_group, x="year", y="violent_crime",color='Group')
+
+
+fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group')
 fig.update_layout(barmode='group',title='Violent Crime Over Time (Rate per 100,000)')
 
 
 
+df['Group'] = df['Group'].apply(str) 
+fig2 = px.scatter(df.sort_values(by='Group'), x="Police Spending", y="Violent Crime",color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
 
-fig2 = px.scatter(df, x="police", y="violent_crime",color='Group',hover_data=['city_merge_name','violent_crime','police','population'])
+df['Group'] = df['Group'].apply(str) 
+fig3 = px.scatter_geo(df,
+                    lat="Latitude",
+                    lon="Longitude",
+                    hover_name="City Name",
+                    projection="albers usa",
+                    color="Group")
 
-
-fig3 = px.choropleth(df[df.year==2017], geojson=json.loads(relevant_areas.to_json()), color="Group",
-                    locations="city_merge_name", featureidkey="properties.city_name",
-                    projection="albers usa"
-                   )
 fig3.update_layout(
         title = 'Metropolitan Areas by Cluster Label'
 )
@@ -70,7 +73,7 @@ stats = html.Div(
         dcc.Dropdown(
         id='demo-dropdown',
         options=labels,
-        value='violent_crime',
+        value='Violent Crime',
         style=dict(
             width='40%',
         )

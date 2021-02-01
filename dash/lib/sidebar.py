@@ -4,6 +4,7 @@ import dash
 from dash.dependencies import Input, Output, State, ClientsideFunction
 import dash_core_components as dcc
 import dash_html_components as html
+import pandas as pd
 
 
 # Dash Bootstrap Components
@@ -29,6 +30,9 @@ DS4A_Img = html.Div(
 # State Dropdown Card
 #############################################################################
 
+# Load the data
+df = pd.read_csv('data/CleanData.csv')
+
 ## Create Options
 items = ['All Years']+[str(i) for i in range(2010,2018)]
 options = []
@@ -36,31 +40,46 @@ for i in items:
     op = {'label': i, 'value': i}
     options.append(op)
 
+cities = ['All Cities'] + sorted(df['City'].unique().tolist())
+city_options = []
+for i in cities: 
+    op = {'label': i, 'value': i}
+    city_options.append(op)
+
 ## Year Drop down
 drop = dcc.Dropdown(
     options=options,
-    value=['All Years'],
-    multi=False
+    value='2010',
+    multi=False,
+    id='year_dropdown'
 )  
 
 
-##
-
+## Button to go back to all defaults
 reset = html.Button('Reset', id='button')
 
+
+### City Drop Down
+city_drop = dcc.Dropdown(
+    options=city_options,
+    multi=True,
+    value="All Cities", 
+    id = 'city_dropdown'
+)  
 
 
 ### Checklist for Cluster Groups
 
 checklist = dcc.Checklist(
     options=[
-        {'label': 'Group 1', 'value': 'Group 1'},
-        {'label': 'Group 2', 'value': 'Group 2'},
-        {'label': 'Group 3', 'value': 'Group 3'},
-        {'label': 'Group 4', 'value': 'Group 4'},
-        {'label': 'Group 5', 'value': 'Group 5'}
+        {'label': 'Group 1', 'value': '1'},
+        {'label': 'Group 2', 'value': '2'},
+        {'label': 'Group 3', 'value': '3'},
+        {'label': 'Group 4', 'value': '4'},
+        {'label': 'Group 5', 'value': '4'},
+        {'label': 'Group 6', 'value': '6'}
     ],
-    value=['Group 1', 'Group 2','Group 3','Group 4','Group 5'],
+    value=['1','2','3','4','5','6'],
     labelStyle={'display': 'block'}, id ="ds4a-checklist",
 )  
 
@@ -79,7 +98,11 @@ sidebar = html.Div(
         ####################################################
         # Place the rest of Layout here
         ####################################################
+        html.H5('Year',className='year_label'),
         drop,
+        html.H5('City',className='year_label'),
+        city_drop,
+        html.H5('Cluster Group',className='year_label'),
         checklist,
         reset,
     ],
