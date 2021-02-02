@@ -33,6 +33,8 @@ app.layout = html.Div(
     className="ds4a-app",  # You can also add your own css files by locating them into the assets folder
 )
 
+color_discrete_map = {"1":'#636EFA',"2":'#EF553B',"3":'#00CC96',"4":'#AB63FA',"5":'#FFA15A',"6":'#19D3F3'}
+#[, , , , , , '#FF6692', '#B6E880', '#FF97FF', '#FECB52']
 
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
@@ -63,12 +65,11 @@ def update_map(year_value,city_value,ds4a_value):
                     lon="Longitude",
                     hover_name="City Name",
                     projection="albers usa",
+                    size="Violent Crime",
+                    color_discrete_map=color_discrete_map,
+                    hover_data={'City':True,'Violent Crime':True,'Property Crime':True,'Police Spending':True,'Total Revenue':True,"Longitude":False,"Latitude":False,"Group":False},
                     color="Group")
 
-    #fig3 = px.choropleth(df_group.sort_values(by='Group'), geojson=json.loads(relevant_areas.to_json()), color="Group",
-                    #locations="City", featureidkey="properties.city_name",
-                    #projection="albers usa"
-                   #)
 
     fig3.update_layout(
         title = 'Metropolitan Areas by Cluster Label'
@@ -78,7 +79,7 @@ def update_map(year_value,city_value,ds4a_value):
     by_group = df_group.groupby(['Year','Group']).mean().reset_index()
     by_group['Group'] = by_group['Group'].astype(str) 
     by_group['Year'] = by_group['Year'].astype(int)
-    fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group')
+    fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group',color_discrete_map=color_discrete_map,)
     fig.update_layout(barmode='group',title='Violent Crime Over Time (Rate per 100,000)')
 
     return fig3,fig
