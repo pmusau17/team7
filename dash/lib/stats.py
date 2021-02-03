@@ -90,9 +90,16 @@ fig8.update_layout(
     height=700
 )
 
-corrs = df[vc_p+vc_n+['Group']+races].groupby("Group").median().corr()
-disp = corrs[races]
-fig9 = px.imshow(disp)
+
+
+race_analysis = []
+for i in range(len(races)):
+    race_melt = df[vc_p+vc_n+['Group']+races[i:i+1]].corr()
+    race_analysis.append(race_melt[races[i:i+1]].iloc[:-2])
+
+
+race_analysis = pd.concat(race_analysis,axis=1)
+fig9 = px.imshow(race_analysis)
 fig9.update_layout(
     autosize=True,
     height=900
@@ -109,7 +116,7 @@ df['Group'] = df['Group'].apply(str)
 fig3 = px.scatter_geo(df,
                     lat="Latitude",
                     lon="Longitude",
-                    hover_name="City Name",
+                    hover_name="City",
                     projection="albers usa",
                     color="Group",
                     size="Violent Crime",

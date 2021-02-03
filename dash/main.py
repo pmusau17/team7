@@ -67,7 +67,7 @@ def update_map(year_value,city_value,ds4a_value):
     fig3 = px.scatter_geo(df_group.sort_values(by='Group'),
                     lat="Latitude",
                     lon="Longitude",
-                    hover_name="City Name",
+                    hover_name="City",
                     projection="albers usa",
                     size="Violent Crime",
                     color_discrete_map=color_discrete_map,
@@ -96,7 +96,6 @@ def update_scatter(input_value):
     if(input_value not in list(df.columns)):
         input_value='Police Spending'
     df['Group'] = df['Group'].apply(str)
-    print(input_value)
     fig= px.scatter(df.sort_values(by='Group'), x=input_value, y="Violent Crime",color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
 
     fig.update_layout(transition_duration=500)
