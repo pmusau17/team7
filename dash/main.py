@@ -34,7 +34,6 @@ app.layout = html.Div(
 )
 
 color_discrete_map = {"1":'#636EFA',"2":'#EF553B',"3":'#00CC96',"4":'#AB63FA',"5":'#FFA15A',"6":'#19D3F3'}
-#[, , , , , , '#FF6692', '#B6E880', '#FF97FF', '#FECB52']
 
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
@@ -50,6 +49,11 @@ df = pd.read_csv('data/CleanDataScatter.csv')
 def update_map(year_value,city_value,ds4a_value):
     df['Group'] = df['Group'].apply(str).apply(str.strip)
     # Select the appropriate groups
+    if(len(ds4a_value)==0 or len(city_value)==0):
+        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
+        fig2 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
+        return fig1,fig2
+
     df_group=df[df.Group.isin(list(ds4a_value))]
     # get the correct year:
     if(year_value!='All Years'):
@@ -90,9 +94,10 @@ def update_map(year_value,city_value,ds4a_value):
     Input('demo-dropdown', 'value'))
 def update_scatter(input_value):
     if(input_value not in list(df.columns)):
-        input_value='Violent Crime'
+        input_value='Police Spending'
     df['Group'] = df['Group'].apply(str)
-    fig= px.scatter(df.sort_values(by='Group'), x="Police Spending", y=input_value,color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
+    print(input_value)
+    fig= px.scatter(df.sort_values(by='Group'), x=input_value, y="Violent Crime",color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
 
     fig.update_layout(transition_duration=500)
 

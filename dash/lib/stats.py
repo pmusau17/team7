@@ -16,12 +16,19 @@ import geopandas as gpd
 # Recall app
 from app import app
 
+# useful definitions that I've conveniently moved elsewhere
+from .definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races
+
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
 color_discrete_map = {"1":'#636EFA',"2":'#EF553B',"3":'#00CC96',"4":'#AB63FA',"5":'#FFA15A',"6":'#19D3F3'}
 # Create Options For Drop Down Menu
+
+
+
+
 labels = []
-for i in list(df.columns):
+for i in list(relevant_variables):
     item = {'label': '{}'.format(i), 'value': '{}'.format(i)}
     labels.append(item)
 
@@ -69,11 +76,32 @@ subfig.layout.yaxis2.title="Percent Labor Force (Age 16 and Over)"
 
 
 
+# Correlation  Summarized Plot
+corrs = df[vc_p+vc_n+['Violent Crime','Property Crime','Group']].groupby("Group").median().corr()
+disp = corrs[['Property Crime', 'Violent Crime']].iloc[0:-2].sort_values(by='Property Crime',ascending=False)
+fig7 = px.imshow(disp)
+
+# Correlation  Summarized Plot
+corrs = df[pc_p+pc_n+['Violent Crime','Property Crime','Group']].groupby("Group").median().corr()
+disp = corrs[['Property Crime', 'Violent Crime']].iloc[0:-2].sort_values(by='Property Crime',ascending=False)
+fig8 = px.imshow(disp)
+fig8.update_layout(
+    autosize=True,
+    height=700
+)
+
+corrs = df[vc_p+vc_n+['Group']+races].groupby("Group").median().corr()
+disp = corrs[races]
+fig9 = px.imshow(disp)
+fig9.update_layout(
+    autosize=True,
+    height=900
+)
+
+
+
 
 #fig.update_layout(barmode='group',title='')
-
-
-
 df['Group'] = df['Group'].apply(str) 
 fig2 = px.scatter(df.sort_values(by='Group'), x="Police Spending", y="Violent Crime",color='Group',hover_data=['City','Violent Crime','Police Spending','Population'],color_discrete_map=color_discrete_map,)
 
@@ -97,9 +125,6 @@ stats = html.Div(
         html.P('2020 was a pivotal year around the world within the context of the conversation around racial equity, justice, and equality. Specifically, in the United States, thousands of protestors and activists have taken to the streets to call for police reform and support for policies that effectively address the underlying factors that contribute to crime, poverty, and homelessness. One of the most poignant demands of these individuals has been a call for a complete reimagining of law enforcement in the United States. This project centers on one facet of this demand which is the reallocation of police budgets or more broadly “defunding the police.” What does this call entail and is there merit to considering its implementation?'),
         
 
-       
-
-
         dcc.Graph(
         id='violent-crime-bar',
         figure=fig
@@ -118,7 +143,7 @@ stats = html.Div(
         dcc.Dropdown(
         id='demo-dropdown',
         options=labels,
-        value='Violent Crime',
+        value='Police Spending',
         style=dict(
             width='40%',
         )
@@ -137,6 +162,21 @@ stats = html.Div(
         dcc.Graph(
         id='violent-crime-labor',
         figure=subfig
+        ),
+
+        dcc.Graph(
+        id='correlation_violent_crime',
+        figure=fig7
+        ),
+
+        dcc.Graph(
+        id='correlation_property_crime',
+        figure=fig8
+        ),
+
+        dcc.Graph(
+        id='correlation_races_crime',
+        figure=fig9
         ),
     ],
     className="ds4a-body",
