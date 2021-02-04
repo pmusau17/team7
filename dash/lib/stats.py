@@ -1,4 +1,5 @@
 import dash
+import dash_table
 from dash.dependencies import Input, Output, State, ClientsideFunction
 import dash_core_components as dcc
 import dash_html_components as html
@@ -31,6 +32,12 @@ labels = []
 for i in list(relevant_variables):
     item = {'label': '{}'.format(i), 'value': '{}'.format(i)}
     labels.append(item)
+
+relevant_variables2 = ['Violent Crime', 'Property Crime']
+labels2 = []
+for i in list(relevant_variables2):
+    item = {'label': '{}'.format(i), 'value': '{}'.format(i)}
+    labels2.append(item)
 
 
 average_crime_per_year = df.groupby('Year').mean().reset_index()
@@ -105,6 +112,10 @@ fig9.update_layout(
     height=900
 )
 
+# Table 
+tab = round(df.groupby('Group').median()[['Violent Crime','Property Crime',
+                                          'Percent of Individuals Below Poverty (Ages 18-64)','Police Spending']].reset_index(),2)
+
 
 
 
@@ -146,14 +157,18 @@ stats = html.Div(
         figure=fig3
         ),
 
-        # drop down menu
+        # drop down menu scatter plot1
         dcc.Dropdown(
         id='demo-dropdown',
         options=labels,
         value='Police Spending',
-        style=dict(
-            width='40%',
-        )
+        ),
+
+        # drop down menu scatter plot1
+        dcc.Dropdown(
+        id='demo-dropdown2',
+        options=labels2,
+        value='Violent Crime',
         ),
 
         dcc.Graph(
@@ -185,6 +200,12 @@ stats = html.Div(
         id='correlation_races_crime',
         figure=fig9
         ),
+
+    dash_table.DataTable(
+        id='table',
+        columns=[{"name": i, "id": i} for i in tab.columns],
+        data=tab.to_dict('records'),
+)
     ],
     className="ds4a-body",
 )
