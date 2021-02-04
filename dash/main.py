@@ -33,6 +33,7 @@ app.layout = html.Div(
     className="ds4a-app",  # You can also add your own css files by locating them into the assets folder
 )
 
+color_discrete_map = {"1":'#636EFA',"2":'#EF553B',"3":'#00CC96',"4":'#AB63FA',"5":'#FFA15A',"6":'#19D3F3'}
 
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
@@ -48,6 +49,11 @@ df = pd.read_csv('data/CleanDataScatter.csv')
 def update_map(year_value,city_value,ds4a_value):
     df['Group'] = df['Group'].apply(str).apply(str.strip)
     # Select the appropriate groups
+    if(len(ds4a_value)==0 or len(city_value)==0):
+        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
+        fig2 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
+        return fig1,fig2
+
     df_group=df[df.Group.isin(list(ds4a_value))]
     # get the correct year:
     if(year_value!='All Years'):
@@ -61,14 +67,13 @@ def update_map(year_value,city_value,ds4a_value):
     fig3 = px.scatter_geo(df_group.sort_values(by='Group'),
                     lat="Latitude",
                     lon="Longitude",
-                    hover_name="City Name",
+                    hover_name="City",
                     projection="albers usa",
+                    size="Violent Crime",
+                    color_discrete_map=color_discrete_map,
+                    hover_data={'City':True,'Violent Crime':True,'Property Crime':True,'Police Spending':True,'Total Revenue':True,"Longitude":False,"Latitude":False,"Group":False},
                     color="Group")
 
-    #fig3 = px.choropleth(df_group.sort_values(by='Group'), geojson=json.loads(relevant_areas.to_json()), color="Group",
-                    #locations="City", featureidkey="properties.city_name",
-                    #projection="albers usa"
-                   #)
 
     fig3.update_layout(
         title = 'Metropolitan Areas by Cluster Label'
@@ -78,7 +83,7 @@ def update_map(year_value,city_value,ds4a_value):
     by_group = df_group.groupby(['Year','Group']).mean().reset_index()
     by_group['Group'] = by_group['Group'].astype(str) 
     by_group['Year'] = by_group['Year'].astype(int)
-    fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group')
+    fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group',color_discrete_map=color_discrete_map,)
     fig.update_layout(barmode='group',title='Violent Crime Over Time (Rate per 100,000)')
 
     return fig3,fig
@@ -86,12 +91,13 @@ def update_map(year_value,city_value,ds4a_value):
 
 @app.callback(
     Output('scatter', 'figure'),
-    Input('demo-dropdown', 'value'))
-def update_scatter(input_value):
+    Input('demo-dropdown', 'value'),
+    Input('demo-dropdown2', 'value'))
+def update_scatter(input_value,input_value2):
     if(input_value not in list(df.columns)):
-        input_value='Violent Crime'
+        input_value='Police Spending'
     df['Group'] = df['Group'].apply(str)
-    fig= px.scatter(df.sort_values(by='Group'), x="Police Spending", y=input_value,color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
+    fig= px.scatter(df.sort_values(by='Group'), x=input_value, y=input_value2,color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
 
     fig.update_layout(transition_duration=500)
 

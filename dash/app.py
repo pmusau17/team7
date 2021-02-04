@@ -14,7 +14,7 @@ external_stylesheets = ['https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cos
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-
+app.config.suppress_callback_exceptions = True
 # Load the data
 df = pd.read_csv('../CleanData/CompleteMerged.csv')
 # Load the GeoJson Data

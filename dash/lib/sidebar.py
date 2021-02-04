@@ -49,7 +49,7 @@ for i in cities:
 ## Year Drop down
 drop = dcc.Dropdown(
     options=options,
-    value='2010',
+    value='All Years',
     multi=False,
     id='year_dropdown'
 )  
@@ -76,7 +76,7 @@ checklist = dcc.Checklist(
         {'label': 'Group 2', 'value': '2'},
         {'label': 'Group 3', 'value': '3'},
         {'label': 'Group 4', 'value': '4'},
-        {'label': 'Group 5', 'value': '4'},
+        {'label': 'Group 5', 'value': '5'},
         {'label': 'Group 6', 'value': '6'}
     ],
     value=['1','2','3','4','5','6'],
