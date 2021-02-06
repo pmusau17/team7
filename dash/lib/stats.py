@@ -19,6 +19,7 @@ from app import app
 
 # useful definitions that I've conveniently moved elsewhere
 from .definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races
+from .text import *
 
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
@@ -49,7 +50,7 @@ by_group['Group'] = by_group['Group'].astype(str)
 
 # bar plot of violent crime
 fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group')
-fig.update_layout(barmode='group',title='Violent Crime Over Time (Rate per 100,000)')
+fig.update_layout(barmode='group',title='',plot_bgcolor='#F8F9F9')
 
 # Line plot of police and violent_crime
 
@@ -67,6 +68,7 @@ subfig2.add_traces(fig5.data + fig6.data)
 subfig2.layout.xaxis.title="Year"
 subfig2.layout.yaxis.title="Violent Crime (Rate per 100,00)"
 subfig2.layout.yaxis2.title="Police Spending"
+subfig2.layout.paper_bgcolor='#F8F9F9'
 
 
 subfig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -83,10 +85,29 @@ subfig.layout.yaxis2.title="Percent Labor Force (Age 16 and Over)"
 
 
 
+subfig3 = make_subplots(specs=[[{"secondary_y": True}]])
+fig5 = px.line(average_crime_per_year, x="Year", y=["Violent Crime"],labels={"Violent Crime": "Violent Crime"})
+fig5.update_traces(line_color='rgb(204, 102, 119)',name="Violent Crime")
+fig6 = px.line(average_crime_per_year, x="Year", y=["Housing and Community Development"],labels={"Housing and Community Development": "Housing and Community Development"})
+fig6.update_traces(line_color='rgb(95, 70, 144)',name="Housing")
+fig6.update_traces(yaxis="y2")
+fig6.update_layout(showlegend=True)
+subfig3.add_traces(fig5.data + fig6.data)
+subfig3.layout.xaxis.title="Year"
+subfig3.layout.yaxis.title="Violent Crime (Rate per 100,00)"
+subfig3.layout.yaxis2.title="Housing and Community Development"
+subfig3.layout.paper_bgcolor='#F8F9F9'
+
+
+
 # Correlation  Summarized Plot
 corrs = df[vc_p+vc_n+['Violent Crime','Property Crime','Group']].groupby("Group").median().corr()
 disp = corrs[['Property Crime', 'Violent Crime']].iloc[0:-2].sort_values(by='Property Crime',ascending=False)
 fig7 = px.imshow(disp)
+fig7.update_layout(
+    paper_bgcolor='#F8F9F9',
+    height=700
+)
 
 # Correlation  Summarized Plot
 corrs = df[pc_p+pc_n+['Violent Crime','Property Crime','Group']].groupby("Group").median().corr()
@@ -94,7 +115,8 @@ disp = corrs[['Property Crime', 'Violent Crime']].iloc[0:-2].sort_values(by='Pro
 fig8 = px.imshow(disp)
 fig8.update_layout(
     autosize=True,
-    height=700
+    height=1200,
+    paper_bgcolor='#F8F9F9'
 )
 
 
@@ -109,7 +131,8 @@ race_analysis = pd.concat(race_analysis,axis=1)
 fig9 = px.imshow(race_analysis)
 fig9.update_layout(
     autosize=True,
-    height=900
+    height=600,
+    paper_bgcolor='#F8F9F9'
 )
 
 # Table 
@@ -140,17 +163,18 @@ fig3.update_layout(
 
 stats = html.Div(
     [        
-        html.P('2020 was a pivotal year around the world within the context of the conversation around racial equity, justice, and equality. Specifically, in the United States, thousands of protestors and activists have taken to the streets to call for police reform and support for policies that effectively address the underlying factors that contribute to crime, poverty, and homelessness. One of the most poignant demands of these individuals has been a call for a complete reimagining of law enforcement in the United States. This project centers on one facet of this demand which is the reallocation of police budgets or more broadly “defunding the police.” What does this call entail and is there merit to considering its implementation?'),
+        html.H3("Background and Motivation"),
+        html.P(p1),
         
-
+        html.P(p3),
+        html.H3("Budget Allocations and Crime"),
+        html.P(p4),
         dcc.Graph(
         id='violent-crime-bar',
         figure=fig
         ),
 
         
-
-        html.P('Specifically, our goal is to discover if a reallocation of city budgets will result in an improved quality of life for city residents. However before proceeding, what do we mean by an “improved quality of life?”'),
 
         dcc.Graph(
         id='map',
@@ -176,36 +200,58 @@ stats = html.Div(
         figure=fig2
         ),
 
+
+        html.H3("What has the largest impact on reducing Crime?"),
+        html.P(p5),
         dcc.Graph(
         id='violent_crime-spending',
         figure=subfig2
         ),
 
+        html.P(p6),
         dcc.Graph(
         id='violent-crime-labor',
-        figure=subfig
+        figure=subfig3
         ),
 
+
+        html.H3("Demographic Data"),
+        html.P(p8),
         dcc.Graph(
         id='correlation_violent_crime',
         figure=fig7
         ),
 
-        dcc.Graph(
-        id='correlation_property_crime',
-        figure=fig8
-        ),
 
+        # html.H3("Relevant Correlations"),
+        # html.P(p5),
+        # dcc.Graph(
+        # id='correlation_property_crime',
+        # figure=fig8
+        # ),
+
+        html.H3("Race and Crime"),
+        html.P(p7),
         dcc.Graph(
         id='correlation_races_crime',
         figure=fig9
         ),
 
-    dash_table.DataTable(
+
+        html.H3("Statistical Analysis"),
+        html.P(p10),
+
+        dash_table.DataTable(
         id='table',
         columns=[{"name": i, "id": i} for i in tab.columns],
         data=tab.to_dict('records'),
-)
+        ),
+
+
+        html.H3("Final Notes"),
+        html.P(p9),
+
+    
     ],
     className="ds4a-body",
 )

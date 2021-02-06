@@ -10,7 +10,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import geopandas as gpd
 import json
-
+from plotly.subplots import make_subplots
+from lib.definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races
 
 # Dash Bootstrap Components
 import dash_bootstrap_components as dbc
@@ -24,6 +25,7 @@ import json
 
 # Recall app
 from app_handle import app
+app.config.suppress_callback_exceptions = True
 
 # LOAD THE DIFFERENT FILES
 from lib import sidebar, stats, title
@@ -50,8 +52,8 @@ def update_map(year_value,city_value,ds4a_value):
     df['Group'] = df['Group'].apply(str).apply(str.strip)
     # Select the appropriate groups
     if(len(ds4a_value)==0 or len(city_value)==0):
-        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
-        fig2 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10)
+        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+        fig2 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
         return fig1,fig2
 
     df_group=df[df.Group.isin(list(ds4a_value))]
@@ -76,7 +78,7 @@ def update_map(year_value,city_value,ds4a_value):
 
 
     fig3.update_layout(
-        title = 'Metropolitan Areas by Cluster Label'
+        title = '',paper_bgcolor='#F8F9F9',plot_bgcolor='#F8F9F9',geo=dict(bgcolor= '#F8F9F9',landcolor='rgb(136,136,136)')
     )
 
 
@@ -84,7 +86,7 @@ def update_map(year_value,city_value,ds4a_value):
     by_group['Group'] = by_group['Group'].astype(str) 
     by_group['Year'] = by_group['Year'].astype(int)
     fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group',color_discrete_map=color_discrete_map,)
-    fig.update_layout(barmode='group',title='Violent Crime Over Time (Rate per 100,000)')
+    fig.update_layout(barmode='group',title='',paper_bgcolor='#F8F9F9')
 
     return fig3,fig
 
@@ -99,9 +101,96 @@ def update_scatter(input_value,input_value2):
     df['Group'] = df['Group'].apply(str)
     fig= px.scatter(df.sort_values(by='Group'), x=input_value, y=input_value2,color='Group',hover_data=['City','Violent Crime','Police Spending','Population'])
 
-    fig.update_layout(transition_duration=500)
+    fig.update_layout(transition_duration=500,paper_bgcolor='#F8F9F9')
 
     return fig
 
+
+
+@app.callback(
+    Output('violent_crime-spending', 'figure'),
+    Output('violent-crime-labor','figure'),
+    Output('correlation_races_crime','figure'),
+    Input('year_dropdown', 'value'),
+    Input('city_dropdown', 'value'),
+    Input('ds4a-checklist', 'value')
+)
+
+def update_analysis_plots(year_value,city_value,ds4a_value):
+    if(len(ds4a_value)==0 or len(city_value)==0):
+        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+        fig2 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+        fig3 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+        return fig1,fig2,fig3
+
+    df['Group'] = df['Group'].apply(str).apply(str.strip)
+    df_group=df[df.Group.isin(list(ds4a_value))]
+    # get the correct year:
+    if(year_value!='All Years'):
+        df_group= df_group[df_group.Year==int(year_value)]
+    # get the correct city
+    if not isinstance(city_value, list):
+        city_value = [city_value]
+    if ('All Cities' not in city_value):
+        df_group = df_group[df_group.City.isin(city_value)]
+    
+    average_crime_per_year = df_group.groupby('Year').mean().reset_index()
+    subfig2 = make_subplots(specs=[[{"secondary_y": True}]])
+    fig5 = px.line(average_crime_per_year, x="Year", y=["Violent Crime"],labels={"Violent Crime": "Violent Crime"})
+    fig5.update_traces(line_color='rgb(204, 102, 119)',name="Violent Crime")
+    fig6 = px.line(average_crime_per_year, x="Year", y=["Police Spending"],labels={"Police Spending": "Police Spending"})
+    fig6.update_traces(line_color='rgb(95, 70, 144)',name="Police Spending")
+    fig6.update_traces(yaxis="y2")
+    fig6.update_layout(showlegend=True)
+    subfig2.add_traces(fig5.data + fig6.data)
+    subfig2.layout.xaxis.title="Year"
+    subfig2.layout.yaxis.title="Violent Crime (Rate per 100,00)"
+    subfig2.layout.yaxis2.title="Police Spending"
+    subfig2.layout.paper_bgcolor='#F8F9F9'
+
+
+    subfig3 = make_subplots(specs=[[{"secondary_y": True}]])
+    fig5 = px.line(average_crime_per_year, x="Year", y=["Violent Crime"],labels={"Violent Crime": "Violent Crime"})
+    fig5.update_traces(line_color='rgb(204, 102, 119)',name="Violent Crime")
+    fig6 = px.line(average_crime_per_year, x="Year", y=["Housing and Community Development"],labels={"Housing and Community Development": "Housing and Community Development"})
+    fig6.update_traces(line_color='rgb(95, 70, 144)',name="Housing")
+    fig6.update_traces(yaxis="y2")
+    fig6.update_layout(showlegend=True)
+    subfig3.add_traces(fig5.data + fig6.data)
+    subfig3.layout.xaxis.title="Year"
+    subfig3.layout.yaxis.title="Violent Crime (Rate per 100,00)"
+    subfig3.layout.yaxis2.title="Housing and Community Development"
+    subfig3.layout.paper_bgcolor='#F8F9F9'
+
+    # Correlation  Summarized Plot
+    cols = vc_p+vc_n+['Violent Crime','Property Crime','Group']
+    passes= True
+    for i in cols:
+        if not (i in list(df_group.columns)):
+            passes=False
+            print("Fail")
+            break
+
+
+    if(passes):
+        race_analysis = []
+        for i in range(len(races)):
+            race_melt = df_group[vc_p+vc_n+['Group']+races[i:i+1]].corr()
+            race_analysis.append(race_melt[races[i:i+1]].iloc[:-2])
+
+
+        race_analysis = pd.concat(race_analysis,axis=1)
+        fig9 = px.imshow(race_analysis)
+        fig9.update_layout(
+            autosize=True,
+            height=600,
+            paper_bgcolor='#F8F9F9'
+        )
+    else:
+        fig9 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+
+    return subfig2,subfig3,fig9
+    
+
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", port="8050", debug=True)
+    app.run_server(host="0.0.0.0", port="8050", debug=True,dev_tools_ui=False)

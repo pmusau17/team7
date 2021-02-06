@@ -104,7 +104,7 @@ sidebar = html.Div(
         city_drop,
         html.H5('Cluster Group',className='year_label'),
         checklist,
-        reset,
+        #reset,
     ],
     className="ds4a-sidebar",
 )
