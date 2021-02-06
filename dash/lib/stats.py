@@ -15,7 +15,7 @@ import pandas as pd
 import os
 import geopandas as gpd
 # Recall app
-from app import app
+from app_handle import app
 
 # useful definitions that I've conveniently moved elsewhere
 from .definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races

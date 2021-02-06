@@ -14,6 +14,8 @@ import dash_bootstrap_components as dbc
 import json
 from datetime import datetime as dt
 
+# Recall app
+from app_handle import app
 
 
 ####################################################################################

@@ -30,6 +30,11 @@ app.config.suppress_callback_exceptions = True
 # LOAD THE DIFFERENT FILES
 from lib import sidebar, stats, title
 
+
+server = app.server
+
+
+
 app.layout = html.Div(
     [title.title,stats.stats, sidebar.sidebar,],
     className="ds4a-app",  # You can also add your own css files by locating them into the assets folder
@@ -193,4 +198,5 @@ def update_analysis_plots(year_value,city_value,ds4a_value):
     
 
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", port="8050", debug=True,dev_tools_ui=False)
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(host='0.0.0.0', port=port,debug=True,dev_tools_ui=False)
