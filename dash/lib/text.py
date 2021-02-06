@@ -61,4 +61,4 @@ aforementioned variables correlate more strongly, and in the case of poverty rat
 
 
 p10 = """While the correlations present an intriguing narrative about reducing crime, we further analyzed the trends so as to ascertain whether the key variables were statistically 
-significant. Insert Items from Keith Here."""
+significant. The results of our statistical analysis demonstrate that:"""

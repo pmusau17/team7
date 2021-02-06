@@ -240,6 +240,12 @@ stats = html.Div(
 
         html.H3("Statistical Analysis"),
         html.P(p10),
+        
+        dcc.Markdown('''
+            1. Poverty rates are significantly different across all levels, with High crime having the highest poverty levels.
+            2. Police spending is significantly different between high and average crime levels, but not different btw low and average.
+            3. Income deficit is different amongst all levels, with high crime areas having the highest income deficit
+        '''),
 
         dash_table.DataTable(
         id='table',
