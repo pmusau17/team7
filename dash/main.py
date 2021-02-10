@@ -11,7 +11,8 @@ import plotly.express as px
 import geopandas as gpd
 import json
 from plotly.subplots import make_subplots
-from lib.definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races
+from lib.definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races,regress_vars
+from lib.regression import reapply_names
 
 # Dash Bootstrap Components
 import dash_bootstrap_components as dbc
@@ -91,7 +92,7 @@ def update_map(year_value,city_value,ds4a_value):
     by_group['Group'] = by_group['Group'].astype(str) 
     by_group['Year'] = by_group['Year'].astype(int)
     fig = px.bar(by_group, x="Year", y="Violent Crime",color='Group',color_discrete_map=color_discrete_map,)
-    fig.update_layout(barmode='group',title='',paper_bgcolor='#F8F9F9')
+    fig.update_layout(barmode='group',title='',paper_bgcolor='#F8F9F9',yaxis_title="Violent Crime (Rate per 100,000)")
 
     return fig3,fig
 
@@ -195,6 +196,47 @@ def update_analysis_plots(year_value,city_value,ds4a_value):
         fig9 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
 
     return subfig2,subfig3,fig9
+
+
+@app.callback(
+    Output('regression_fit_group', 'figure'),
+    Input('ds4a-checklist', 'value')
+)
+def update_regression_plot(ds4a_value):
+    if(len(ds4a_value)==0):
+        fig1 = go.Figure().add_annotation(x=2, y=2,text="No Data to Display",font=dict(family="sans serif",size=25,color="crimson"),showarrow=False,yshift=10).update_layout(paper_bgcolor='#F8F9F9')
+        return fig1
+
+    df['Group'] = df['Group'].apply(str).apply(str.strip)
+    df_group=df[df.Group.isin(list(ds4a_value))]
+    regress = df_group[df_group['City']!='Washington, DC']
+    regress['Violent Crime'] = regress['Violent Crime'] * (10**-5)
+    regress['Property Crime'] = regress['Property Crime'] * (10**-5)
+
+    regress= regress.rename(columns=regress_vars)
+    noDC = regress
+    noDC['Fits']= 4.662918e-03+ noDC['rev_total']*1.699413e-07
+    + noDC['public_welfare']*-2.784823e-06 + noDC['welfare_cash']*3.215736e-06 
+    +noDC['correction']*-3.820413e-06 + noDC['housing_commdevt']*-1.767486e-06 
+    + noDC['youth_poverty']*7.044471e-05 
+    +noDC['estimate_employed']*-1.596820e-02 +noDC["income_deficit"]*-2.441968e-07
+    + noDC["total_estimate_age_under_18_years"]*-3.196742e-02+ noDC["total_estimate_sex_male"]*4.768845e-02
+    + noDC["total_estimate_age_65_years_and_over"]*-1.251370e+03+noDC["percent_race_one_race_asian"]*-6.814841e-05
+    + noDC["percent_black"]*3.520207e-05+noDC["percent_hawaiian"]*1.294790e-03+ noDC["percent_race_one_race_white"] * -4.546245e-05
+    +noDC["percent_hispanic_or_latino"] * 1.482309e-05
+
+    noDC = noDC.rename(columns=lambda x: reapply_names(x))
+    noDC['Group'] = noDC['Group'].apply(str)
+    noDC['Violent Crime'] = noDC['Violent Crime']*(10**5)
+    noDC['Violent Crime Prediction (Rate per 100,000)'] = noDC['Fits']*(10**5)
+
+    fig_reg_group = px.scatter(noDC, y='Violent Crime', x='Violent Crime Prediction (Rate per 100,000)', trendline="ols",color = "Group",color_discrete_map=color_discrete_map)
+    fig_reg_group.update_layout(
+        paper_bgcolor='#F8F9F9'
+    )
+    
+
+    return fig_reg_group
     
 
 if __name__ == "__main__":

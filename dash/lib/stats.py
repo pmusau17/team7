@@ -20,6 +20,7 @@ from app_handle import app
 # useful definitions that I've conveniently moved elsewhere
 from .definitions import relevant_variables,pc_n,pc_p,vc_n,vc_p,races
 from .text import *
+from .regression import fig_reg,fig_reg_group
 
 # Load the data
 df = pd.read_csv('data/CleanDataScatter.csv')
@@ -242,15 +243,37 @@ stats = html.Div(
         html.P(p10),
         
         dcc.Markdown('''
-            1. Poverty rates are significantly different across all levels, with High crime having the highest poverty levels.
-            2. Police spending is significantly different between high and average crime levels, but not different btw low and average.
-            3. Income deficit is different amongst all levels, with high crime areas having the highest income deficit
+
+            To decipher trends within the data we classified cities into three distinct categories based on the violent crime rate. The categories were cities with high levels of crime (>530 incidents), low levels
+            of crime (<300 incidents), and the rest were labeled average. We also analyzed statistical differences between the cluster groups. As a final note, we made a choice to remove Washington, DC from our statistical analysis, since 
+            the trends present within the city were so different from other cities that clustering grouped it by itself. The results of our analysis revealed the following:
+
+            1. Poverty rates are significantly different across all crime levels. Cities with the highest crime also had the highest poverty levels.
+            2. Police spending is significantly different between high and average crime levels, but there is no difference in significane levels between low and average crime cities.
+            3. Income deficits, or the amount of money required to rise above the poverty line, is different across all crime levels, with high crime areas having the highest income deficit.
+            4. The amount that cities spent on education was significantly different between high and low crime rate cities, average and low  cities but not between high and average crime cities.
         '''),
 
-        dash_table.DataTable(
-        id='table',
-        columns=[{"name": i, "id": i} for i in tab.columns],
-        data=tab.to_dict('records'),
+        # dcc.Graph(
+        # id='regression_fit',
+        # figure=fig_reg
+        # ),
+
+        # dash_table.DataTable(
+        # id='table',
+        # columns=[{"name": i, "id": i} for i in tab.columns],
+        # data=tab.to_dict('records'),
+        # ),
+
+        dcc. Markdown('''With those insights we sought to develop a simple linear regression model based on the most siginificant variables obtained through our correlation analyis. The results
+        of this endeavor are displayed below. It is not surprising, that model was largely unable to predict rates of violent crime. The relationship between the variables in our dataset are decidely non-linear
+        and predictive models are notoriously difficult to obtain. Still it demonstrated that cities within different clusters had noticeable differences in behavior. We invite you to investigate these relationships,
+        by interacting with the Group Labels.''' 
+        ),
+
+        dcc.Graph(
+        id='regression_fit_group',
+        figure=fig_reg_group
         ),
 
 

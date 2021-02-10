@@ -40,7 +40,7 @@ p7 = """
     a non-trivial task. In this regard, we chose to defer explanations to Academic research. However, it is worth noting that the over-representation of some racial minorities can in part 
     be explained by socioeconomic status. These factors include poverty, exposure to poor neighboorhoods, poor access to public education, housing segregation and these trends are present within 
     our datasets. The variance in rates of crime is also present within the data. Below we display racial demographics alongside socioeconomic factors in order to facilitate a converstation about 
-    how to improve the quality of life of marginalized communities.
+    how to improve the quality of life of marginalized communities. Explore the trends within each group using the sidebar.
 """
 
 p8 = """ One pressing question is how does crime in the U.S differ by demographic charateristics? To answer this question we used the American Community Survey (ACS) provided by the Census
