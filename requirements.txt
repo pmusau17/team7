@@ -14,4 +14,5 @@ pathlib==1.0.1
 Pillow==8.0.1
 plotly==4.14.3
 geopandas
+scipy
 statsmodels
