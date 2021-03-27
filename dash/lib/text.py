@@ -14,10 +14,8 @@ the guiding for this project. However it is worth noting that conversations abou
 risks perpetuting biases endemic of the criminal justice system. With that in that mind Let's dive in. """
 
 p4 = """
-We began by exploring crime rates within 118 cities around the United States and analyzed how much is spent on policing per capita and how much is spent on other social services. 
-We also analyzed other city metrics including income per capita, employment rate, populations below poverty level and education levels. Our goal was to discover what are the most significant factors in reducing crime rate. 
-Here's a brief survey of crime rates within the cities we analyzed. Specifically the types of crime that we were most concerned with were property crime and violent crime. The cities were grouped into six distinct groups that were identifed using clustering. This allowed us to group cities with similar
-behavor into distinct segments. Feel free to explore the data by changing items in the sidebar.
+We began by exploring crime rates within 118 cities around the United States and analyzed how much is spent on policing per capita and how much is spent on other social services. We also analyzed other city metrics including income per capita, employment rate, populations below poverty level and education levels. Our goal was to discover what are the most significant factors in reducing crime rate. Here's a brief survey of crime rates within the cities we analyzed. Specifically the types of crime that we were most concerned with were property crime and violent crime. The cities were grouped into six distinct groups that were identifed using clustering. This allowed us to group cities with similar behavior into distinct segments. Feel free to explore the data by changing items in the sidebar. 
+
 """
 
 p5 = """
@@ -36,17 +34,10 @@ While this correlation does not imply a causal relationship we infer that citize
 """
 
 p7 = """
-    The relationship between race and crime has been a widely debated and controversial topic for more than a century. Crime rates vary among racial groups, and explaining this phenomenon is
-    a non-trivial task. In this regard, we chose to defer explanations to Academic research. However, it is worth noting that the over-representation of some racial minorities can in part 
-    be explained by socioeconomic status. These factors include poverty, exposure to poor neighboorhoods, poor access to public education, housing segregation and these trends are present within 
-    our datasets. The variance in rates of crime is also present within the data. Below we display racial demographics alongside socioeconomic factors in order to facilitate a converstation about 
-    how to improve the quality of life of marginalized communities.
+   The relationship between race and crime has been a widely debated and controversial topic for more than a century. Crime rates vary among racial groups, and explaining this phenomenon is a non-trivial task. In this regard, we chose to defer explanations to Academic research. However, it is worth noting that the over-representation of some racial minorities can in part be explained by socioeconomic status. These factors include poverty, exposure to poor neighborhoods, poor access to public education, housing segregation and these trends are present within our datasets. The variance in rates of crime is also present within the data. Below we display racial demographics alongside socioeconomic factors in order to facilitate a conversation about how to improve the quality of life of marginalized communities. Explore the trends within each group using the sidebar. 
 """
 
-p8 = """ One pressing question is how does crime in the U.S differ by demographic charateristics? To answer this question we used the American Community Survey (ACS) provided by the Census
-Bureau for the years 2010-2017. This dataset contains a wealth of information. Notably, population, racial demographics, poverty estimates, and housing unit estimates. The results of our analysis
-showed that factors related to poverty were positively correlated with crime, while education labor force participation, and personal income were the strongest negative correlations. These results
-present a narrative consistent with those reported by the IMF, the World Bank and Amnesty International.
+p8 = """ One pressing question is how does crime in the U.S differ by demographic characteristics? To answer this question we used the American Community Survey (ACS) provided by the Census Bureau for the years 2010-2017. This dataset contains a wealth of information. Notably, population, racial demographics, poverty estimates, and housing unit estimates. The results of our analysis showed that factors related to poverty were positively correlated with crime, while education labor force participation, and personal income were the strongest negative correlations. These results present a narrative consistent with those reported by the IMF, the World Bank and Amnesty International. 
 """
 
 p9 = """Our data suggests that higher spending on policing does not, on its own merit, result in lower crime rates. In fact, our data indicates that the cities with the highest police
